@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css">
     <title>Title</title>
 </head>
 <body>
 {% include 'hat.html' %}
-    <p>VK - @shlangust</p>
-    <p>TG - @Shlangust</p>
+    <form action="/back_con" method="post">
+        <input class="icheika" type="text" name="cont" placeholder="Введите предложение или отзыв">
+        <input class="sub" type="submit" value="Добавить!">
 {% include 'daun.html' %}
 </body>
 </html>

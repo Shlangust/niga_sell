@@ -1,0 +1,18 @@
+.blocks{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.newblock{
+    flex: 1 0 30vw;
+    max-width: 30vw;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    text-align: center;
+
+img{
+    max-width:30vw;
+    height:30vw;}
+}
+

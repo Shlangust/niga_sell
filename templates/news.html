@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="static/style.css">
+<link rel="stylesheet" href="static/news-style.css">
     <title></title>
     </head>
 <body>
 
     {% include 'hat.html' %}
-    {% for i in posts %}
-        <h2>{{ i.title }}</h2>
-        <p>{{ i.content }}</p>
-        <a href="/delete/{{ i.id }}" class="remove_button">Удалить</a>
-    {% endfor %}
+    <div class="blocks">
+        {% for post in posts %}
+        <div class="newblock">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
 
-    <div class="add_remove">
-        <button onclick="window.location.href='/add'" class="add_button">добавить запись</button>
+            <img src="{{post.image_data}}">
 
+
+            <a href="/delete/{{ post.id }}" class="remove_button">Удалить</a>
+        </div>
+
+{% endfor %}
     </div>
+
+
 {% include 'daun.html' %}
 </body>
 </html>

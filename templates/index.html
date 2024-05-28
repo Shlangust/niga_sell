@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="static/style.css">
 <head>
 
-    <title></title>
+    <title>главная</title>
     </head>
 <body>
     {% include 'hat.html' %}
 
-<h3>Официальный сайт организации "За права ежей"</h3>
-<img src="static/еж.jpg">
-
-    {% include 'daun.html' %}
+<h3>Новости из мира гражданского оружия</h3>
+    <div class= "new_main_page">
+        <p>{{new1.title}}</p>
+        <img src="{{new1.image_data}}">
     </div>
+    <div class= "new_main_page">
+        <p>{{new2.title}}</p>
+        <img src="{{new2.image_data}}">
+    </div>
+
+{% include 'daun.html' %}
 </body>
 </html>
